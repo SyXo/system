@@ -15,7 +15,7 @@ When only wanting to install the packages and dotfiles on an already installed s
 
 ## Packages installed
 
-### System pakcages
+### System packages
 - [base]()
 - [base-devel]()
 
@@ -31,14 +31,14 @@ When only wanting to install the packages and dotfiles on an already installed s
 - [feh]()
 - [git]()
 - [grub]()
-- [gutenprint]() -- has drives for Canon printers
+- [gutenprint]() -- has drivers for Canon printers
 - [htop]()
 - [ibus]()
-- [ranger]()
-- [rxvt-unicode]()
+- [openssh]()
 - [mplayer]()
 - [neofetch]()
-- [openssh]()
+- [ranger]()
+- [rxvt-unicode]()
 - [steam]()
 - [texlive-core]() -- for LaTeX
 - [tmux]()
