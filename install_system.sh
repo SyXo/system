@@ -71,9 +71,8 @@ read -p "Enter a username: " name
 #grub-install --recheck /dev/sda
 
 # install packages
-curl -O https://raw.githubusercontent.com/joakimaling/system/master/apps.sh && ./apps.sh
+curl -O https://raw.githubusercontent.com/joakimaling/system/master/install_packages.sh && ./install_packages.sh
+
 #exit
 #umount -R /mnt
 #reboot
-
-
