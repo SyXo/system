@@ -1,5 +1,5 @@
 # system
-This is a compilation of scripts which aims to automate the installation process of [Arch Linux](https://www.archlinux.org/), my favourite packages and [dotfiles](https://github.com/joakimaling/dotfiles).
+This is a compilation of scripts which aims to automate the installation process of [Arch Linux](https://www.archlinux.org/), my favourite packages and [dotfiles](https://github.com/joakimaling/dotfiles) onto a new system.
 
 ## Installation
 When installing a new system; load the media which contains Arch Linux and type these commands when the prompt appears 
@@ -45,6 +45,7 @@ The packages I use are split up according to the installation process. The syste
 - [tmux]()
 - [transmission-cli]()
 - [ttf-hack]() -- primary terminal font
+- [vagrant]()
 - [vim]()
 - [virtualbox]()
 - [wine-staging]() -- has better support for HearthStone
@@ -87,6 +88,9 @@ vivaldi 1.12.955.48-1
 wget 1.19.2-1
 winetricks 20171018-1
 xf86-video-intel 1:2.99.917+797+g4798e18b-1
+
+## Disclaimer
+This code is distributed as is. I hold no responsibility to any possible damage to your system.
 
 ## More
 - Test!
