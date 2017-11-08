@@ -114,6 +114,9 @@ netctl enable ${_HOSTNAME}_ethernet
 echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 rmmod pcspkr
 
+# set clock
+hwclock --systohc
+
 # set language & timezone
 sed -i 's/#$_LANG/$_LANG/g' /etc/locale.gen
 locale-gen
@@ -129,9 +132,16 @@ passwd $_USER
 # allow sudo usage for wheel
 sed -i 's/ #%wheel ALL=(ALL) ALL/ %wheel ALL=(ALL) ALL/g' /etc/sudoers
 
-# install packages
+# set password for root
+passwd
+
+# install packages (see ./install_packages.sh for more)
 curl -O https://raw.githubusercontent.com/joakimaling/system/master/install_packages.sh && ./install_packages.sh
 
+# clean up
 exit
 umount -R /mnt
+
+# eject & reboot
+dialogue "Eject CD-rom?" && eject
 reboot
