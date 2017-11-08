@@ -95,6 +95,21 @@ arch-chroot /mnt /bin/bash
 grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
+# setup pacman
+sed -i 's/#[multilib]/[multilib]/g' /etc/pacman.conf
+sed -i 's/#Include = /etc/pacman.d/mirrorlist/Include = /etc/pacman/mirrorlist/g' /etc/pacman.conf
+sed -e'/^#VerbosePkgLists/a ILoveCandy' /etc/pacman.conf > pacman.conf
+pacman -Syy
+
+# enable networking
+cat > /etc/netctl/${_HOSTNAME}-ethernet <<EOF
+Description='DHCP Ethernet Connection'
+Connection=ethernet
+Interface=eth0
+IP=dhcp
+EOF
+netctl enable ${_HOSTNAME}_ethernet
+
 # disable pc speaker
 echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 rmmod pcspkr
