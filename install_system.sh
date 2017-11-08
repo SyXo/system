@@ -105,7 +105,7 @@ locale-gen
 localectl set-locale LANG=$_LANG
 localectl set-keymap $_KEYMAP
 timedatectl set-timezone $_TIMEZONE
-hostnamectl set-hostname $HOST
+hostnamectl set-hostname $_HOSTNAME
 
 # create user
 useradd -m -g users -G lp,vagrant,wheel -s /bin/bash $_USER
