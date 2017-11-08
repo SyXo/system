@@ -41,18 +41,46 @@ dialogue "Do you wish to proceed?" || { printf "\nBye!\n"; exit; }
 lsblk
 
 # create partitions
+cat <<EOF | fdisk /dev/sda
+o
+n
+p
 
+
++200M
+n
+p
+
+
++8G
+n
+p
+
+
++25G
+n
+p
+
+
+w
+EOF
 
 # create file systems
-#mkfs.ext4 /dev/sda1
-#mkswap /dev/sda2
-#swapon /dev/sda2
+mkfs.ext2 /dev/sda1
+mkfs.ext4 /dev/sda3
+mkfs.ext4 /dev/sda4
+mkswap /dev/sda2
+swapon /dev/sda2
 
 # mount partitions
-#mount /dev/sda1 /mnt
-#mkdir -p /mnt/{boot,home}
-#mount /dev/sda1 /mnt/boot
-#mount /dev/sda1 /mnt/home
+mount /dev/sda3 /mnt
+mkdir -p /mnt/{boot,home}
+mount /dev/sda1 /mnt/boot
+mount /dev/sda4 /mnt/home
+
+# check result
+lsblk
+#dialogue "Is this OK?" "Y" || fdisk /dev/sda
 
 # install system
 pacstrap -i /mnt base base-devel grub
