@@ -5,7 +5,7 @@
 #
 
 # custom settings
-_HOSTNAME=neko
+_HOSTNAME=sumika
 _KEYMAP=sv-latin1
 _LANG=en_GB.UTF-8
 _TIMEZONE=Europe/Stockholm
@@ -32,7 +32,7 @@ _awesome() {
 }
 
 # make preparations
-#loadkeys sv-latin1
+loadkeys $_KEYMAP
 
 printf "Welcome! This script will install a system with %s on %s!\n" "$(_awesome)" "$(_archlinux)" 
 printf "\e[0;31mBeware that you'll lose any not previously backed up data!\e[0m\n\n"
@@ -98,11 +98,11 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # setup pacman
 sed -i 's/#[multilib]/[multilib]/g' /etc/pacman.conf
 sed -i 's/#Include = /etc/pacman.d/mirrorlist/Include = /etc/pacman/mirrorlist/g' /etc/pacman.conf
-sed -e'/^#VerbosePkgLists/a ILoveCandy' /etc/pacman.conf > pacman.conf
+sed -e '/^#VerbosePkgLists/a ILoveCandy' /etc/pacman.conf > pacman.conf
 pacman -Syy
 
 # enable networking
-cat > /etc/netctl/${_HOSTNAME}-ethernet <<EOF
+cat > /etc/netctl/${_HOSTNAME}_ethernet <<EOF
 Description='DHCP Ethernet Connection'
 Connection=ethernet
 Interface=eth0
