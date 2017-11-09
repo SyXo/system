@@ -8,6 +8,7 @@
 _HOSTNAME=sumika
 _KEYMAP=sv-latin1
 _LANG=en_GB.UTF-8
+_PARTITION=/dev/sda
 _TIMEZONE=Europe/Stockholm
 _USER=tora_chan
 
@@ -36,13 +37,13 @@ loadkeys $_KEYMAP
 
 # print welcome & warning messages
 printf "Welcome to Tora-chan's Automatic Installer! This script will install a fully configured, ready-to-use system with %s on %s!\n" "$(_awesome)" "$(_archlinux)" 
-printf "\e[0;31mAttention! Beware that this will erase the entire /dev/sda partition & you'll lose all not previously backed up data! Proceed only if you're entirely sure!\e[0m\n\n"
+printf "\e[0;31mAttention! Beware that this will erase the entire %s partition & you'll lose all not previously backed up data! Proceed only if you're entirely sure!\e[0m\n\n" $_PARTITION
 dialogue "Do you wish to proceed?" || { printf "\nBye!\n"; exit; }
 
 lsblk
 
 # create partitions
-cat <<EOF | fdisk /dev/sda
+cat | fdisk $_PARTITION <<EOF
 o
 n
 p
@@ -67,21 +68,21 @@ w
 EOF
 
 # create file systems
-mkfs.ext2 /dev/sda1
-mkfs.ext4 /dev/sda3
-mkfs.ext4 /dev/sda4
-mkswap /dev/sda2
-swapon /dev/sda2
+mkfs.ext2 ${_PARTITION}1
+mkfs.ext4 ${_PARTITION}3
+mkfs.ext4 ${_PARTITION}4
+mkswap ${_PARTITION}2
+swapon ${_PARTITION}2
 
 # mount partitions
-mount /dev/sda3 /mnt
+mount ${_PARTITION}3 /mnt
 mkdir -p /mnt/{boot,home}
-mount /dev/sda1 /mnt/boot
-mount /dev/sda4 /mnt/home
+mount ${_PARTITION}1 /mnt/boot
+mount ${_PARTITION}4 /mnt/home
 
 # check result
 lsblk
-#dialogue "Is this OK?" "Y" || fdisk /dev/sda
+#dialogue "Is this OK?" "Y" || fdisk $_PARTITION
 
 # install system
 pacstrap -i /mnt base base-devel grub
@@ -93,7 +94,7 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
 
 # install boot loader
-grub-install --recheck /dev/sda
+grub-install --recheck $_PARTITION
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # setup pacman
