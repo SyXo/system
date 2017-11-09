@@ -21,6 +21,10 @@ openssh mplayer neofetch ranger rxvt-unicode steam texlive-core tmux \
 transmission-cli ttf-hack vagrant vim virtualbox wine-staging xcompmgr xrog-server \
 xorg-xinit
 
+# create downloads folder
+mkdir -p /home/$_USER/Downloads/torrents
+chgrp -R transmission /home/$_USER/Downloads
+
 # fetch dotfiles
 mkdir /home/$_USER/Code && cd /home/$_USER/Code
 git clone https://github.com/joakimaling/dotfiles
