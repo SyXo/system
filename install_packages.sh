@@ -46,7 +46,10 @@ ln -sf /home/$_USER/Code/.vimrc
 ln -sf /home/$_USER/Code/.xinitrc
 ln -sf /home/$_USER/Code/.Xresources
 
-#
+# add SSH keys
+[ -f /home/$_USER/.ssh/id_rsa ] || ssh-keygen -b 4096 -t rsa -C "$_USER@$_HOSTNAME"
+
+# allow password-less use of nfs
 cat <<BOX >> /etc/sudoers
 Cmnd_Alias VAGRANT_EXPORTS_CHOWN = /bin/chown 0\:0 /tmp/*
 Cmnd_Alias VAGRANT_EXPORTS_MV = /bin/mv -f /tmp/* /etc/exports
@@ -55,4 +58,3 @@ Cmnd_Alias VAGRANT_NFSD_START = /usr/bin/systemctl start nfs-server.service
 Cmnd_Alias VAGRANT_NFSD_APPLY = /usr/sbin/exportfs -ar
 %vagrant ALL=(root) NOPASSWD: VAGRANT_EXPORTS_CHOWN, VAGRANT_EXPORTS_MV, VAGRANT_NFSD_CHECK, VAGRANT_NFSD_START, VAGRANT_NFSD_APPLY
 BOX
-
