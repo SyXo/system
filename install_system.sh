@@ -34,8 +34,9 @@ _awesome() {
 # make preparations
 loadkeys $_KEYMAP
 
-printf "Welcome! This script will install a system with %s on %s!\n" "$(_awesome)" "$(_archlinux)" 
-printf "\e[0;31mBeware that you'll lose any not previously backed up data!\e[0m\n\n"
+# print welcome & warning messages
+printf "Welcome to Tora-chan's Automatic Installer! This script will install a fully configured, ready-to-use system with %s on %s!\n" "$(_awesome)" "$(_archlinux)" 
+printf "\e[0;31mAttention! Beware that this will erase the entire /dev/sda partition & you'll lose all not previously backed up data! Proceed only if you're entirely sure!\e[0m\n\n"
 dialogue "Do you wish to proceed?" || { printf "\nBye!\n"; exit; }
 
 lsblk
