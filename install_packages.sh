@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#
+# This script installs all the packages & dotfiles I use daily.
+#
+
+_HOSTNAME=sumika
+_USER=tora_chan
+
 # AUR installer
 sudo pacman -S expac git jshon wget
 wget https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=packer
@@ -15,8 +22,25 @@ transmission-cli ttf-hack vagrant vim virtualbox wine-staging xcompmgr xrog-serv
 xorg-xinit
 
 # fetch dotfiles
-mkdir ~/Code && cd ~/Code
+mkdir /home/$_USER/Code && cd /home/$_USER/Code
 git clone https://github.com/joakimaling/dotfiles
+
+# link dotfiles
+cd /home/$_USER
+ln -sf /home/$_USER/Code/.bash_logout
+ln -sf /home/$_USER/Code/.bash_profile
+ln -sf /home/$_USER/Code/.bashrc
+ln -sf /home/$_USER/Code/bin/
+ln -sf /home/$_USER/Code/.config/
+ln -sf /home/$_USER/Code/.conkyrc
+ln -sf /home/$_USER/Code/.dircolors
+ln -sf /home/$_USER/Code/.dosbox
+ln -sf /home/$_USER/Code/.fonts.conf
+ln -sf /home/$_USER/Code/.mplayer
+ln -sf /home/$_USER/Code/.tmux.conf
+ln -sf /home/$_USER/Code/.vimrc
+ln -sf /home/$_USER/Code/.xinitrc
+ln -sf /home/$_USER/Code/.Xresources
 
 #
 cat <<BOX >> /etc/sudoers
