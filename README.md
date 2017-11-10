@@ -19,39 +19,40 @@ The packages I use are split up according to the installation process. The syste
 ### System packages
 - [base](https://www.archlinux.org/groups/x86_64/base/)
 - [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/)
-- [grub]()
+- [grub](https://www.archlinux.org/packages/core/x86_64/grub/)
 
 ### Custom packages
 
-- [allegro]()
-- [awesome]()
-- [conky]()
-- [cups]()
-- [discord]()
-- [dosbox]()
-- [dropbox]()
-- [feh]()
-- [git]()
-- [gutenprint]() -- has drivers for Canon printers
-- [htop]()
-- [ibus]()
-- [openssh]()
-- [mplayer]()
-- [neofetch]()
-- [ranger]()
-- [rxvt-unicode]()
-- [steam]()
+- [allegro](https://www.archlinux.org/packages/community/x86_64/allegro/)
+- [awesome](https://www.archlinux.org/packages/community/x86_64/awesome/)
+- [conky](https://www.archlinux.org/packages/extra/x86_64/conky/)
+- [cups](https://www.archlinux.org/packages/extra/x86_64/cups/)
+- [discord](https://aur.archlinux.org/packages/discord/)
+- [dosbox](https://www.archlinux.org/packages/community/x86_64/dosbox/)
+- [dropbox](https://aur.archlinux.org/packages/dropbox/)
+- [feh](https://www.archlinux.org/packages/extra/x86_64/feh/)
+- [git](https://www.archlinux.org/packages/extra/x86_64/git/)
+- [gutenprint](https://www.archlinux.org/packages/extra/x86_64/gutenprint/) -- has drivers for Canon printers
+- [htop](https://www.archlinux.org/packages/extra/x86_64/htop/)
+- [ibus](https://www.archlinux.org/packages/extra/x86_64/ibus/)
+- [openssh](https://www.archlinux.org/packages/core/x86_64/openssh/)
+- [mplayer](https://www.archlinux.org/packages/extra/x86_64/mplayer/)
+- [neofetch](https://aur.archlinux.org/packages/neofetch/)
+- [packer](https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz)
+- [ranger](https://www.archlinux.org/packages/community/any/ranger/)
+- [rxvt-unicode](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode/)
+- [steam](https://www.archlinux.org/packages/multilib/x86_64/steam/)
 - [texlive-core](https://www.archlinux.org/packages/extra/any/texlive-core/) -- for LaTeX
-- [tmux]()
-- [transmission-cli]()
-- [ttf-hack]() -- primary terminal font
-- [vagrant]()
-- [vim]()
-- [virtualbox]()
-- [wine-staging]() -- has better support for HearthStone
-- [xcompmgr]() -- for true transperency
-- [xorg-server]()
-- [xorg-xinit]()
+- [tmux](https://www.archlinux.org/packages/community/x86_64/tmux/)
+- [transmission-cli](https://www.archlinux.org/packages/extra/x86_64/transmission-cli/)
+- [ttf-hack](https://www.archlinux.org/packages/extra/any/ttf-hack/) -- primary terminal font
+- [vagrant](https://www.archlinux.org/packages/community/x86_64/vagrant/)
+- [vim](https://www.archlinux.org/packages/extra/x86_64/vim/)
+- [virtualbox](https://www.archlinux.org/packages/community/x86_64/virtualbox/)
+- [wine-staging](https://www.archlinux.org/packages/multilib/x86_64/wine-staging/) -- has better support for HearthStone
+- [xcompmgr](https://www.archlinux.org/packages/extra/x86_64/xcompmgr/) -- for true transparency
+- [xorg-server](https://www.archlinux.org/packages/extra/x86_64/xorg-server/)
+- [xorg-xinit](https://www.archlinux.org/packages/extra/x86_64/xorg-xinit/)
 
 alsa-utils 1.1.4-1
 bind-tools 9.11.2-2
