@@ -9,11 +9,10 @@
 [ -z $_USER ] && _USER=$(whoami)
 
 # AUR installer
-sudo pacman -S expac git jshon wget
-wget https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=packer
-mv PKGBUILD\?h\=packer PKGBUILD
-makepkg
-sudo pacman -U packer-*.pkg.tar.xz
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz
+tar -xz packer.tar.gz && cd packer
+makepkg -is --noconfirm
+cd .. && rm -r packer*
 
 # install packages
 packer -S --needed --noconfirm --noedit \
