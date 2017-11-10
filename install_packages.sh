@@ -4,8 +4,9 @@
 # This script installs all the packages & dotfiles I use daily.
 #
 
-_HOSTNAME=sumika
-_USER=tora_chan
+# set constants if not passed through from ./install_system.sh
+[ -z $_HOSTNAME ] && _HOSTNAME=$(hostname)
+[ -z $_USER ] && _USER=$(whoami)
 
 # AUR installer
 sudo pacman -S expac git jshon wget
