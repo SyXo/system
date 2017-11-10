@@ -22,6 +22,9 @@ openssh mplayer neofetch ranger rxvt-unicode steam texlive-core tmux \
 transmission-cli ttf-hack vagrant vim virtualbox wine-staging xcompmgr xrog-server \
 xorg-xinit
 
+# create pictures folder
+mkdir /home/$_USER/Pictures
+
 # create downloads folder & start daemon
 mkdir -p /home/$_USER/Downloads/torrents
 chgrp -R transmission /home/$_USER/Downloads
