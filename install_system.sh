@@ -128,7 +128,7 @@ timedatectl set-timezone $_TIMEZONE
 hostnamectl set-hostname $_HOSTNAME
 
 # create user
-useradd -m -g users -G lp,vagrant,wheel -s /bin/bash $_USER
+useradd -G lp,vagrant,vboxusers,wheel -g users -m -s /bin/bash $_USER
 passwd $_USER
 
 # allow sudo usage for wheel
