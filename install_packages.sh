@@ -29,6 +29,9 @@ mkdir -p /home/$_USER/Downloads/torrents
 chgrp -R transmission /home/$_USER/Downloads
 systemctl enable transmission
 
+# enable cups
+systemctl enable org.cups.cupsd
+
 # fetch dotfiles
 mkdir /home/$_USER/Code && cd /home/$_USER/Code
 git clone https://github.com/joakimaling/dotfiles
