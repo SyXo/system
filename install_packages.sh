@@ -24,6 +24,10 @@ xrog-server xorg-xinit
 
 # create folders
 mkdir -p $_HOME/{Code,Documents,Downloads/torrents,Music,Pictures,Videos,Virtual}
+mkdir -p $_HOME/.vim/{autoload,bundle}
+
+# install pathogen
+curl -LSso $_HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # change virtualbox folder
 vboxmanage setproperty machinefolder $_HOME/Virtual
