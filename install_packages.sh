@@ -29,6 +29,10 @@ mkdir -p $_HOME/.vim/{autoload,bundle}
 # install pathogen
 curl -LSso $_HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+# install vim bundles
+git clone https://github.com/editorconfig/editorconfig-vim.git $_HOME/.vim/bundle
+git clone https://github.com/mattn/emmet-vim.git $_HOME/.vim/bundle
+
 # change virtualbox folder
 vboxmanage setproperty machinefolder $_HOME/Virtual
 
