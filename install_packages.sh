@@ -7,6 +7,7 @@
 # set constants if not passed through from ./install_system.sh
 [ -z $_HOSTNAME ] && _HOSTNAME=$(hostname)
 [ -z $_USER ] && _USER=$(whoami)
+_HOME=/home/$_USER
 
 # AUR installer
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz
@@ -22,7 +23,7 @@ transmission-cli ttf-hack vagrant vim virtualbox wine-staging xcompmgr \
 xrog-server xorg-xinit
 
 # create pictures folder
-mkdir /home/$_USER/Pictures
+mkdir $_HOME/Pictures
 
 # create downloads folder & start daemon
 mkdir -p /home/$_USER/Downloads/torrents
@@ -33,28 +34,27 @@ systemctl enable transmission
 systemctl enable org.cups.cupsd
 
 # fetch dotfiles
-mkdir /home/$_USER/Code && cd /home/$_USER/Code
-git clone https://github.com/joakimaling/dotfiles
+mkdir $_HOME/Code
+git clone https://github.com/joakimaling/dotfiles $_HOME/Code
 
 # link dotfiles
-cd /home/$_USER
-ln -sf /home/$_USER/Code/.bash_logout
-ln -sf /home/$_USER/Code/.bash_profile
-ln -sf /home/$_USER/Code/.bashrc
-ln -sf /home/$_USER/Code/bin/
-ln -sf /home/$_USER/Code/.config/
-ln -sf /home/$_USER/Code/.conkyrc
-ln -sf /home/$_USER/Code/.dircolors
-ln -sf /home/$_USER/Code/.dosbox
-ln -sf /home/$_USER/Code/.fonts.conf
-ln -sf /home/$_USER/Code/.mplayer
-ln -sf /home/$_USER/Code/.tmux.conf
-ln -sf /home/$_USER/Code/.vimrc
-ln -sf /home/$_USER/Code/.xinitrc
-ln -sf /home/$_USER/Code/.Xresources
+ln -sf $_HOME/Code/.bash_logout
+ln -sf $_HOME/Code/.bash_profile
+ln -sf $_HOME/Code/.bashrc
+ln -sf $_HOME/Code/bin/
+ln -sf $_HOME/Code/.config/
+ln -sf $_HOME/Code/.conkyrc
+ln -sf $_HOME/Code/.dircolors
+ln -sf $_HOME/Code/.dosbox
+ln -sf $_HOME/Code/.fonts.conf
+ln -sf $_HOME/Code/.mplayer
+ln -sf $_HOME/Code/.tmux.conf
+ln -sf $_HOME/Code/.vimrc
+ln -sf $_HOME/Code/.xinitrc
+ln -sf $_HOME/Code/.Xresources
 
 # add SSH keys
-[ -f /home/$_USER/.ssh/id_rsa ] || ssh-keygen -b 4096 -t rsa -C "$_USER@$_HOSTNAME"
+[ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -b 4096 -t rsa -C "$_USER@$_HOSTNAME"
 
 # allow password-less use of nfs
 cat <<BOX >> /etc/sudoers
