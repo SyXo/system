@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #
-# This is a script which installs my hand-crafted environment
+# This is a script which installs my hand-crafted environment. Be warned,
+# though, that this will erase all data on selected partition.
 #
 
 # custom settings
