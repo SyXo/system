@@ -121,8 +121,9 @@ hwclock --systohc
 
 # set language & timezone
 sed -i 's/#$_LANG/$_LANG/g' /etc/locale.gen
+[ ${_LANG##*en*} ] && sed -i 's/#en_DK.UTF-8/en_DK.UTF-8/g' /etc/locale.gen
 locale-gen
-localectl set-locale LANG=$_LANG
+localectl set-locale LANG=$_LANG $([ ${_LANG##*en*} ] && echo "LC_TIME=en_DK.UTF-8")
 localectl set-keymap $_KEYMAP
 timedatectl set-timezone $_TIMEZONE
 hostnamectl set-hostname $_HOSTNAME
