@@ -22,19 +22,23 @@ ibus openssh mplayer neofetch ranger rxvt-unicode steam texlive-core tmux \
 transmission-cli ttf-hack vagrant vim virtualbox wine-staging xcompmgr \
 xrog-server xorg-xinit
 
-# create pictures folder
-mkdir $_HOME/Pictures
+# create folders
+mkdir -p $_HOME/{Code,Documents,Downloads/torrents,Music,Pictures,Videos,Virtual}
 
-# create downloads folder & start daemon
-mkdir -p /home/$_USER/Downloads/torrents
-chgrp -R transmission /home/$_USER/Downloads
-systemctl enable transmission
+# change virtualbox folder
+vboxmanage setproperty machinefolder $_HOME/Virtual
+
+# add SSH keys
+[ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -b 4096 -t rsa -C "$_USER@$_HOSTNAME"
 
 # enable cups
 systemctl enable org.cups.cupsd
 
+# edit downloads folder & start daemon
+chgrp -R transmission $_HOME/Downloads
+systemctl enable transmission
+
 # fetch dotfiles
-mkdir $_HOME/Code
 git clone https://github.com/joakimaling/dotfiles $_HOME/Code
 
 # link dotfiles
@@ -52,9 +56,6 @@ ln -sf $_HOME/Code/.tmux.conf
 ln -sf $_HOME/Code/.vimrc
 ln -sf $_HOME/Code/.xinitrc
 ln -sf $_HOME/Code/.Xresources
-
-# add SSH keys
-[ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -b 4096 -t rsa -C "$_USER@$_HOSTNAME"
 
 # allow password-less use of nfs
 cat <<BOX >> /etc/sudoers
