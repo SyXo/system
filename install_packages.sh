@@ -58,7 +58,7 @@ ln -sf $_HOME/Code/.xinitrc
 ln -sf $_HOME/Code/.Xresources
 
 # allow password-less use of nfs
-cat <<BOX >> /etc/sudoers
+cat >> /etc/sudoers <<BOX
 Cmnd_Alias VAGRANT_EXPORTS_CHOWN = /bin/chown 0\:0 /tmp/*
 Cmnd_Alias VAGRANT_EXPORTS_MV = /bin/mv -f /tmp/* /etc/exports
 Cmnd_Alias VAGRANT_NFSD_CHECK = /usr/bin/systemctl status --no-pager nfs-server.service
