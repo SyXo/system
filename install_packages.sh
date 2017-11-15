@@ -16,7 +16,7 @@ makepkg -is --noconfirm
 cd .. && rm -r packer*
 
 # install packages
-packer -S --needed --noconfirm --noedit \
+sudo -u $_USER packer -S --needed --noconfirm --noedit \
 allegro awesome bc conky cups discord dosbox dropbox feh git gutenprint htop \
 ibus openssh mplayer neofetch ranger rxvt-unicode steam texlive-core tmux \
 transmission-cli ttf-hack vagrant vim virtualbox wine-staging xcompmgr \
