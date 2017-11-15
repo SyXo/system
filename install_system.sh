@@ -117,17 +117,20 @@ netctl enable ${_HOSTNAME}_ethernet
 echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 rmmod pcspkr
 
-# set clock
-hwclock --systohc
+# set hostname
+hostnamectl set-hostname $_HOSTNAME
 
-# set language & timezone
+# set language
 sed -i 's/#$_LANG/$_LANG/g' /etc/locale.gen
 [ ${_LANG##*en*} ] && sed -i 's/#en_DK.UTF-8/en_DK.UTF-8/g' /etc/locale.gen
 locale-gen
 localectl set-locale LANG=$_LANG $([ ${_LANG##*en*} ] && echo "LC_TIME=en_DK.UTF-8")
 localectl set-keymap $_KEYMAP
+
+# set time
 timedatectl set-timezone $_TIMEZONE
-hostnamectl set-hostname $_HOSTNAME
+timedatectl set-ntp true
+hwclock --systohc
 
 # create user
 useradd -G lp,vagrant,vboxusers,wheel -g users -m -s /bin/bash $_USER
