@@ -118,6 +118,7 @@ echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 rmmod pcspkr
 
 # set hostname
+sed -i "/::1/a 127.0.0.1\t$_HOSTNAME.local\t\t$_HOSTNAME\n::1\t\t$_HOSTNAME.local\t\t$_HOSTNAME" /etc/hosts
 hostnamectl set-hostname $_HOSTNAME
 
 # set language
