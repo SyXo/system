@@ -85,8 +85,14 @@ mount ${_PARTITION}4 /mnt/home
 lsblk
 #dialogue "Is this OK?" "Y" || fdisk $_PARTITION
 
+# find graphics card
+_DRIVER="mesa lib32-mesa"
+case "$(lspci | grep -e VGA -e 3D)" in
+	*Intel*) _DRIVER="$_DRIVER xf86-video-intel" # xf86-video-nouveau xf86-video-ati xf86-video-amdgpu
+esac
+
 # install system
-pacstrap -i /mnt base base-devel grub
+pacstrap -i /mnt base base-devel grub $_DRIVER
 
 # write partition table
 genfstab -U -p /mnt >> /mnt/etc/fstab
