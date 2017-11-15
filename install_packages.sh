@@ -56,6 +56,7 @@ ln -sf $_HOME/Code/.bashrc
 ln -sf $_HOME/Code/bin/
 ln -sf $_HOME/Code/.config/
 ln -sf $_HOME/Code/.conkyrc
+ln -sf $_HOME/Code/.cvsignore
 ln -sf $_HOME/Code/.dircolors
 ln -sf $_HOME/Code/.dosbox
 ln -sf $_HOME/Code/.fonts.conf
