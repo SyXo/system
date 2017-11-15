@@ -33,16 +33,18 @@ The packages I use are split up according to the installation process. The syste
 - [feh](https://www.archlinux.org/packages/extra/x86_64/feh/)
 - [git](https://www.archlinux.org/packages/extra/x86_64/git/)
 - [gutenprint](https://www.archlinux.org/packages/extra/x86_64/gutenprint/) -- has drivers for Canon printers
+- [highlight](https://www.archlinux.org/packages/community/x86_64/highlight/)
 - [htop](https://www.archlinux.org/packages/extra/x86_64/htop/)
 - [ibus](https://www.archlinux.org/packages/extra/x86_64/ibus/)
-- [openssh](https://www.archlinux.org/packages/core/x86_64/openssh/)
+- [mediainfo](https://www.archlinux.org/packages/community/x86_64/mediainfo/)
 - [mplayer](https://www.archlinux.org/packages/extra/x86_64/mplayer/)
 - [neofetch](https://aur.archlinux.org/packages/neofetch/)
+- [openssh](https://www.archlinux.org/packages/core/x86_64/openssh/)
 - [packer](https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz)
 - [ranger](https://www.archlinux.org/packages/community/any/ranger/)
 - [rxvt-unicode](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode/)
 - [steam](https://www.archlinux.org/packages/multilib/x86_64/steam/)
-- [texlive-core](https://www.archlinux.org/packages/extra/any/texlive-core/) -- for LaTeX
+- [texlive-latexextra](https://www.archlinux.org/packages/extra/any/texlive-latexextra/) -- for LaTeX
 - [tmux](https://www.archlinux.org/packages/community/x86_64/tmux/)
 - [transmission-cli](https://www.archlinux.org/packages/extra/x86_64/transmission-cli/)
 - [ttf-hack](https://www.archlinux.org/packages/extra/any/ttf-hack/) -- primary terminal font
