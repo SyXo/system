@@ -108,7 +108,7 @@ pacman -Syy
 cat > /etc/netctl/${_HOSTNAME}_ethernet <<EOF
 Description='DHCP Ethernet Connection'
 Connection=ethernet
-Interface=eth0
+Interface=$(ip link | awk -F': ' '$0 !~ "lo|vir|wl|^[^0-9]"{print $2;getline}')
 IP=dhcp
 EOF
 netctl enable ${_HOSTNAME}_ethernet
