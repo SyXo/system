@@ -99,7 +99,7 @@ grub-install --recheck $_PARTITION
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # setup pacman
-sed -i 's/#[multilib]/[multilib]/g' /etc/pacman.conf
+sed -i -e 's/\#\[multilib\]/\[multilib\]/g' /etc/pacman.conf
 sed -i 's/#Include = /etc/pacman.d/mirrorlist/Include = /etc/pacman/mirrorlist/g' /etc/pacman.conf
 sed -e '/^#VerbosePkgLists/a ILoveCandy' /etc/pacman.conf > pacman.conf
 pacman -Syy
