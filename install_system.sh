@@ -122,8 +122,8 @@ sed -i "/::1/a 127.0.0.1\t$_HOSTNAME.local\t\t$_HOSTNAME\n::1\t\t$_HOSTNAME.loca
 hostnamectl set-hostname $_HOSTNAME
 
 # set language
-sed -i 's/#$_LANG/$_LANG/g' /etc/locale.gen
-[ ${_LANG##*en*} ] && sed -i 's/#en_DK.UTF-8/en_DK.UTF-8/g' /etc/locale.gen
+sed -i -e 's/\#$_LANG/$_LANG/g' /etc/locale.gen
+[ ${_LANG##*en*} ] && sed -i -e 's/\#en_DK.UTF-8/en_DK.UTF-8/g' /etc/locale.gen
 locale-gen
 localectl set-locale LANG=$_LANG $([ ${_LANG##*en*} ] && echo "LC_TIME=en_DK.UTF-8")
 localectl set-keymap $_KEYMAP
@@ -138,7 +138,7 @@ useradd -G lp,vagrant,vboxusers,wheel -g users -m -s /bin/bash $_USER
 passwd $_USER
 
 # allow sudo usage for wheel
-sed -i 's/ #%wheel ALL=(ALL) ALL/ %wheel ALL=(ALL) ALL/g' /etc/sudoers
+sed -i -e 's/ \#%wheel ALL=(ALL) ALL/ %wheel ALL=(ALL) ALL/g' /etc/sudoers
 
 # set password for root
 passwd
