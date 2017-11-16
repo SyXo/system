@@ -66,6 +66,9 @@ ln -sf $_HOME/Code/.vimrc
 ln -sf $_HOME/Code/.xinitrc
 ln -sf $_HOME/Code/.Xresources
 
+# configure git
+git config --global core.excludesfile '~/.cvsignore'
+
 # allow password-less use of nfs
 cat >> /etc/sudoers <<BOX
 Cmnd_Alias VAGRANT_EXPORTS_CHOWN = /bin/chown 0\:0 /tmp/*
