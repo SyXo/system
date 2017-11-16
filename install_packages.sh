@@ -66,6 +66,12 @@ ln -sf $_HOME/Code/.vimrc $_HOME
 ln -sf $_HOME/Code/.xinitrc $_HOME
 ln -sf $_HOME/Code/.Xresources $_HOME
 
+# link for root
+ln -sf $_HOME/Code/.bash_logout /root
+ln -sf $_HOME/Code/.bash_profile /root
+ln -sf $_HOME/Code/.bashrc /root
+ln -sf $_HOME/Code/bin/ /root
+
 # configure git
 git config --global core.excludesfile '~/.cvsignore'
 
