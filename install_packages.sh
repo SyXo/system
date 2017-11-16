@@ -19,8 +19,8 @@ cd .. && rm -r packer*
 sudo -u $_USER packer -S --needed --noconfirm --noedit \
 allegro awesome bc conky cups discord dosbox dropbox feh git gutenprint \
 highlight htop ibus mediainfo mplayer neofetch openssh ranger rxvt-unicode \
-steam texlive-latexextra tmux transmission-cli ttf-hack vagrant vim virtualbox \
-wine-staging xcompmgr xrog-server xorg-xinit
+scrot steam texlive-latexextra tmux transmission-cli ttf-hack vagrant vim \
+virtualbox wine-staging xcompmgr xrog-server xorg-xinit
 
 # create folders
 mkdir -p $_HOME/{Code,Documents,Downloads/torrents,Music,Pictures,Videos,Virtual}

@@ -43,6 +43,7 @@ The packages I use are split up according to the installation process. The syste
 - [packer](https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz)
 - [ranger](https://www.archlinux.org/packages/community/any/ranger/)
 - [rxvt-unicode](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode/)
+- [scrot](http://freecode.com/projects/scrot)
 - [steam](https://www.archlinux.org/packages/multilib/x86_64/steam/)
 - [texlive-latexextra](https://www.archlinux.org/packages/extra/any/texlive-latexextra/) -- for LaTeX
 - [tmux](https://www.archlinux.org/packages/community/x86_64/tmux/)
@@ -77,7 +78,6 @@ noto-fonts-cjk 20170601-1
 pulseaudio 11.1-1
 pulseaudio-alsa 2-3
 pygmentize 2.2.0-1
-scrot 0.8.17-2
 smartgit 17.1.1-1
 thunderbird 52.4.0-1
 ttf-dejavu 2.37-1
