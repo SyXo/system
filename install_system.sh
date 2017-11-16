@@ -150,7 +150,9 @@ sed -i -e 's/ \#%wheel ALL=(ALL) ALL/ %wheel ALL=(ALL) ALL/g' /etc/sudoers
 passwd
 
 # install packages (see ./install_packages.sh for more)
-curl -O https://raw.githubusercontent.com/joakimaling/system/master/install_packages.sh && ./install_packages.sh
+if [ dialogue "Install packages & dotfiles?" "Y" ]; then
+  curl -O https://raw.githubusercontent.com/joakimaling/system/master/install_packages.sh && ./install_packages.sh
+fi
 
 # clean up
 exit
