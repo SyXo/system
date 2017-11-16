@@ -50,21 +50,21 @@ systemctl enable transmission
 git clone https://github.com/joakimaling/dotfiles $_HOME/Code
 
 # link dotfiles
-ln -sf $_HOME/Code/.bash_logout
-ln -sf $_HOME/Code/.bash_profile
-ln -sf $_HOME/Code/.bashrc
-ln -sf $_HOME/Code/bin/
-ln -sf $_HOME/Code/.config/
-ln -sf $_HOME/Code/.conkyrc
-ln -sf $_HOME/Code/.cvsignore
-ln -sf $_HOME/Code/.dircolors
-ln -sf $_HOME/Code/.dosbox
-ln -sf $_HOME/Code/.fonts.conf
-ln -sf $_HOME/Code/.mplayer
-ln -sf $_HOME/Code/.tmux.conf
-ln -sf $_HOME/Code/.vimrc
-ln -sf $_HOME/Code/.xinitrc
-ln -sf $_HOME/Code/.Xresources
+ln -sf $_HOME/Code/.bash_logout $_HOME
+ln -sf $_HOME/Code/.bash_profile $_HOME
+ln -sf $_HOME/Code/.bashrc $_HOME
+ln -sf $_HOME/Code/bin/ $_HOME
+ln -sf $_HOME/Code/.config/ $_HOME
+ln -sf $_HOME/Code/.conkyrc $_HOME
+ln -sf $_HOME/Code/.cvsignore $_HOME
+ln -sf $_HOME/Code/.dircolors $_HOME
+ln -sf $_HOME/Code/.dosbox $_HOME
+ln -sf $_HOME/Code/.fonts.conf $_HOME
+ln -sf $_HOME/Code/.mplayer $_HOME
+ln -sf $_HOME/Code/.tmux.conf $_HOME
+ln -sf $_HOME/Code/.vimrc $_HOME
+ln -sf $_HOME/Code/.xinitrc $_HOME
+ln -sf $_HOME/Code/.Xresources $_HOME
 
 # configure git
 git config --global core.excludesfile '~/.cvsignore'
