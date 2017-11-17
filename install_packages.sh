@@ -47,7 +47,7 @@ chgrp -R transmission $_HOME/Downloads
 systemctl enable transmission
 
 # fetch dotfiles
-git clone https://github.com/joakimaling/dotfiles $_HOME/Code
+git clone --recursive https://github.com/joakimaling/dotfiles $_HOME/Code
 
 # link dotfiles
 ln -sf $_HOME/Code/.bash_logout $_HOME
