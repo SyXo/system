@@ -2,19 +2,19 @@
 This is a compilation of scripts which aims to automate the installation process of [Arch Linux](https://www.archlinux.org/), my favourite packages and [dotfiles](https://github.com/joakimaling/dotfiles) onto a new system.
 
 ## Installation
-When installing a new system; load the media which contains Arch Linux and type these commands when the prompt appears 
+When installing a new system; load the Arch Linux installation media and type these commands when a prompt appears 
 ```
 # curl -O https://raw.githubusercontent.com/joakimaling/system/master/install_system.sh
 # ./install_system.sh
 ```
-When only wanting to install the packages and dotfiles on an already installed system; type these commands
+When only wanting to install the packages and dotfiles on an existing system; type these commands
 ```
 # curl -O https://raw.githubusercontent.com/joakimaling/system/master/install_packages.sh
 # ./install_packages.sh
 ```
 
 ## Packages installed
-The packages I use are split up according to the installation process. The system packages are installed when Arch Linux is being installed to set up a functional system that will boot.
+The packages I use are split into two groups; system packages and custom packages. They're installed during system installation and setup respectively.
 
 ### System packages
 - [base](https://www.archlinux.org/groups/x86_64/base/)
