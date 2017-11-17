@@ -37,7 +37,9 @@ The packages I use are split up according to the installation process. The syste
 - [htop](https://www.archlinux.org/packages/extra/x86_64/htop/)
 - [ibus](https://www.archlinux.org/packages/extra/x86_64/ibus/)
 - [mediainfo](https://www.archlinux.org/packages/community/x86_64/mediainfo/)
+- [mpc](https://www.archlinux.org/packages/extra/x86_64/mpc/)
 - [mplayer](https://www.archlinux.org/packages/extra/x86_64/mplayer/)
+- [ncmpcpp](https://www.archlinux.org/packages/community/x86_64/ncmpcpp/)
 - [neofetch](https://aur.archlinux.org/packages/neofetch/)
 - [openssh](https://www.archlinux.org/packages/core/x86_64/openssh/)
 - [packer](https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz)
@@ -71,8 +73,6 @@ lib32-libpulse 11.1-1
 lib32-mesa 17.2.4-1
 lib32-openal 1.18.2-1
 mesa 17.2.4-1
-mpc 0.28-1
-ncmpcpp 0.8.1-1
 noto-fonts 20171025-1
 noto-fonts-cjk 20170601-1
 pulseaudio 11.1-1
