@@ -46,6 +46,9 @@ systemctl enable org.cups.cupsd
 chgrp -R transmission $_HOME/Downloads
 systemctl enable transmission
 
+# enable images in ranger
+ranger --copy-config=scope
+
 # fetch dotfiles
 git clone --recursive https://github.com/joakimaling/dotfiles $_HOME/Code
 
