@@ -77,7 +77,6 @@ noto-fonts 20171025-1
 noto-fonts-cjk 20170601-1
 pulseaudio 11.1-1
 pulseaudio-alsa 2-3
-pygmentize 2.2.0-1
 smartgit 17.1.1-1
 thunderbird 52.4.0-1
 ttf-dejavu 2.37-1
