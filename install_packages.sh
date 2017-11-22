@@ -66,6 +66,7 @@ ln -sf $_HOME/Code/dotfiles/.fonts.conf $_HOME
 ln -sf $_HOME/Code/dotfiles/.mplayer $_HOME
 ln -sf $_HOME/Code/dotfiles/.tmux.conf $_HOME
 ln -sf $_HOME/Code/dotfiles/.vimrc $_HOME
+ln -sf $_HOME/Code/dotfiles/.vim/ $_HOME
 ln -sf $_HOME/Code/dotfiles/.xinitrc $_HOME
 ln -sf $_HOME/Code/dotfiles/.Xresources $_HOME
 
