@@ -37,7 +37,7 @@ git clone https://github.com/mattn/emmet-vim.git $_HOME/.vim/bundle
 vboxmanage setproperty machinefolder $_HOME/Virtual
 
 # add SSH keys
-[ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -b 4096 -t rsa -C "$_USER@$_HOSTNAME"
+[ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -C "$_USER@$_HOSTNAME" -b 4096 -t rsa
 
 # enable cups
 systemctl enable org.cups.cupsd
