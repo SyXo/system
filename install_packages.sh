@@ -57,27 +57,27 @@ ranger --copy-config=scope
 git clone --recursive https://github.com/joakimaling/dotfiles $_HOME/Code
 
 # link dotfiles
-ln -sf $_HOME/Code/.bash_logout $_HOME
-ln -sf $_HOME/Code/.bash_profile $_HOME
-ln -sf $_HOME/Code/.bashrc $_HOME
-ln -sf $_HOME/Code/bin/ $_HOME
-ln -sf $_HOME/Code/.config/ $_HOME
-ln -sf $_HOME/Code/.conkyrc $_HOME
-ln -sf $_HOME/Code/.cvsignore $_HOME
-ln -sf $_HOME/Code/.dircolors $_HOME
-ln -sf $_HOME/Code/.dosbox $_HOME
-ln -sf $_HOME/Code/.fonts.conf $_HOME
-ln -sf $_HOME/Code/.mplayer $_HOME
-ln -sf $_HOME/Code/.tmux.conf $_HOME
-ln -sf $_HOME/Code/.vimrc $_HOME
-ln -sf $_HOME/Code/.xinitrc $_HOME
-ln -sf $_HOME/Code/.Xresources $_HOME
+ln -sf $_HOME/Code/dotfiles/.bash_logout $_HOME
+ln -sf $_HOME/Code/dotfiles/.bash_profile $_HOME
+ln -sf $_HOME/Code/dotfiles/.bashrc $_HOME
+ln -sf $_HOME/Code/dotfiles/bin/ $_HOME
+ln -sf $_HOME/Code/dotfiles/.config/ $_HOME
+ln -sf $_HOME/Code/dotfiles/.conkyrc $_HOME
+ln -sf $_HOME/Code/dotfiles/.cvsignore $_HOME
+ln -sf $_HOME/Code/dotfiles/.dircolors $_HOME
+ln -sf $_HOME/Code/dotfiles/.dosbox $_HOME
+ln -sf $_HOME/Code/dotfiles/.fonts.conf $_HOME
+ln -sf $_HOME/Code/dotfiles/.mplayer $_HOME
+ln -sf $_HOME/Code/dotfiles/.tmux.conf $_HOME
+ln -sf $_HOME/Code/dotfiles/.vimrc $_HOME
+ln -sf $_HOME/Code/dotfiles/.xinitrc $_HOME
+ln -sf $_HOME/Code/dotfiles/.Xresources $_HOME
 
 # link for root
-ln -sf $_HOME/Code/.bash_logout /root
-ln -sf $_HOME/Code/.bash_profile /root
-ln -sf $_HOME/Code/.bashrc /root
-ln -sf $_HOME/Code/bin/ /root
+ln -sf $_HOME/Code/dotfiles/.bash_logout /root
+ln -sf $_HOME/Code/dotfiles/.bash_profile /root
+ln -sf $_HOME/Code/dotfiles/.bashrc /root
+ln -sf $_HOME/Code/dotfiles/bin/ /root
 
 # configure git
 git config --global core.excludesfile '~/.cvsignore'
