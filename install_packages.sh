@@ -28,10 +28,6 @@ xrog-server xorg-xinit
 
 # create folders
 mkdir -p $_HOME/{Code,Documents,Downloads/torrents,Music,Pictures,Videos,Virtual}
-mkdir -p $_HOME/.vim/{autoload,bundle}
-
-# install pathogen
-curl -LSso $_HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # install vim bundles
 git clone https://github.com/editorconfig/editorconfig-vim.git $_HOME/.vim/bundle
