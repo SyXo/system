@@ -27,7 +27,7 @@ transmission-cli ttf-hack vagrant vim virtualbox wine-staging xcompmgr \
 xrog-server xorg-xinit
 
 # create folders
-mkdir -p $_HOME/{Code,Documents,Downloads/torrents,Music,Pictures,Videos,Virtual}
+mkdir -p $_HOME/{Code,Documents/templates,Downloads/torrents,Music,Pictures,Videos,Virtual}
 
 # install vim bundles
 git clone https://github.com/editorconfig/editorconfig-vim.git $_HOME/.vim/bundle
