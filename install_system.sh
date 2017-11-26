@@ -15,7 +15,7 @@ _USER=tora_chan
 
 dialogue() {
   while true; do
-    read -p "$(printf "$1 [%s] " $([ "$2" == "Y" ] && echo "Yn" || echo "yN"))" answer  
+    read -p "$(printf "$1 [%s] " $([ "$2" == "Y" ] && echo "Yn" || echo "yN"))" answer
     case $answer in
       [Yy]) return 0 ;;
       [Nn]) return 1 ;;
@@ -37,7 +37,7 @@ _awesome() {
 loadkeys $_KEYMAP
 
 # print welcome & warning messages
-printf "Welcome to Tora-chan's Automatic Installer! This script will install a fully configured, ready-to-use system with %s on %s!\n" "$(_awesome)" "$(_archlinux)" 
+printf "Welcome to Tora-chan's Automatic Installer! This script will install a fully configured, ready-to-use system with %s on %s!\n" "$(_awesome)" "$(_archlinux)"
 printf "\e[0;31mAttention! Beware that this will erase the entire %s partition & you'll lose all not previously backed up data! Proceed only if you're entirely sure!\e[0m\n\n" $_PARTITION
 dialogue "Do you wish to proceed?" || { printf "\nBye!\n"; exit; }
 
@@ -151,7 +151,7 @@ passwd
 
 # install packages (see ./install_packages.sh for more)
 if [ dialogue "Install packages & dotfiles?" "Y" ]; then
-  curl -O https://raw.githubusercontent.com/joakimaling/system/master/install_packages.sh && ./install_packages.sh
+  curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_packages.sh && ./install_packages.sh
 fi
 
 # clean up

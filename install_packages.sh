@@ -10,7 +10,7 @@
 _HOME=/home/$_USER
 
 # AUR installer
-curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz
+curl -LO https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz
 tar -xz packer.tar.gz && cd packer
 makepkg -is --noconfirm
 cd .. && rm -r packer*
