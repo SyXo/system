@@ -20,11 +20,11 @@ gpg --recv-key 0FC3042E345AD05D
 
 # install packages
 sudo -u $_USER packer -S --noconfirm --noedit \
-allegro awesome bc clang cmake conky cups discord dosbox dropbox feh git \
-gutenprint highlight htop ibus ibus-anthy mediainfo mpc mplayer ncmpcpp \
-neofetch openssh ranger rxvt-unicode scrot steam texlive-latexextra tmux \
-transmission-cli ttf-hack vagrant vim virtualbox wine-staging xcompmgr \
-xrog-server xorg-xinit
+allegro awesome bc clang cmake conky cups discord dosbox dropbox feh firefox \
+git gutenprint highlight htop ibus ibus-anthy mediainfo mpc mplayer ncmpcpp \
+neofetch openssh ranger rxvt-unicode scrot steam texlive-latexextra \
+thunderbird tmux transmission-cli ttf-hack vagrant vim virtualbox wine-staging \
+xcompmgr xrog-server xorg-xinit
 
 # create folders
 mkdir -p $_HOME/{Code,Documents/templates,Downloads/torrents,Music,Pictures,Videos,Virtual}

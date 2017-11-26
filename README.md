@@ -31,6 +31,7 @@ The packages I use are split into two groups; system packages and custom package
 - [dosbox](https://www.archlinux.org/packages/community/x86_64/dosbox/)
 - [dropbox](https://aur.archlinux.org/packages/dropbox/)
 - [feh](https://www.archlinux.org/packages/extra/x86_64/feh/)
+- [firefox](https://www.archlinux.org/packages/extra/x86_64/firefox/)
 - [git](https://www.archlinux.org/packages/extra/x86_64/git/)
 - [gutenprint](https://www.archlinux.org/packages/extra/x86_64/gutenprint/) -- has drivers for Canon printers
 - [highlight](https://www.archlinux.org/packages/community/x86_64/highlight/)
@@ -49,6 +50,7 @@ The packages I use are split into two groups; system packages and custom package
 - [scrot](http://freecode.com/projects/scrot)
 - [steam](https://www.archlinux.org/packages/multilib/x86_64/steam/)
 - [texlive-latexextra](https://www.archlinux.org/packages/extra/any/texlive-latexextra/) -- for LaTeX
+- [thunderbird](https://www.archlinux.org/packages/extra/x86_64/thunderbird/)
 - [tmux](https://www.archlinux.org/packages/community/x86_64/tmux/)
 - [transmission-cli](https://www.archlinux.org/packages/extra/x86_64/transmission-cli/)
 - [ttf-hack](https://www.archlinux.org/packages/extra/any/ttf-hack/) -- primary terminal font
@@ -65,7 +67,6 @@ bind-tools 9.11.2-2
 clang 5.0.0-1
 cmake 3.9.4-1
 evince 3.26.0+14+g2a499547-1
-firefox 56.0.2-1
 jre8-openjdk 8.u144-1
 lib32-gnutls 3.5.13-1
 lib32-libldap 2.4.44-2
@@ -78,7 +79,6 @@ noto-fonts-cjk 20170601-1
 pulseaudio 11.1-1
 pulseaudio-alsa 2-3
 smartgit 17.1.1-1
-thunderbird 52.4.0-1
 ttf-dejavu 2.37-1
 ufw 0.35-3
 winetricks 20171018-1
