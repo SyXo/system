@@ -41,6 +41,7 @@ The packages I use are split into two groups; system packages and custom package
 - [mediainfo](https://www.archlinux.org/packages/community/x86_64/mediainfo/)
 - [mpc](https://www.archlinux.org/packages/extra/x86_64/mpc/)
 - [mplayer](https://www.archlinux.org/packages/extra/x86_64/mplayer/)
+- [mupdf](https://www.archlinux.org/packages/community/x86_64/mupdf/)
 - [ncmpcpp](https://www.archlinux.org/packages/community/x86_64/ncmpcpp/)
 - [neofetch](https://aur.archlinux.org/packages/neofetch/)
 - [openssh](https://www.archlinux.org/packages/core/x86_64/openssh/)
@@ -64,9 +65,6 @@ The packages I use are split into two groups; system packages and custom package
 
 alsa-utils 1.1.4-1
 bind-tools 9.11.2-2
-clang 5.0.0-1
-cmake 3.9.4-1
-evince 3.26.0+14+g2a499547-1
 jre8-openjdk 8.u144-1
 lib32-gnutls 3.5.13-1
 lib32-libldap 2.4.44-2
