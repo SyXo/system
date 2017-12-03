@@ -32,12 +32,13 @@ The packages I use are split into two groups; system packages and custom package
 - [dropbox](https://aur.archlinux.org/packages/dropbox/)
 - [feh](https://www.archlinux.org/packages/extra/x86_64/feh/)
 - [firefox](https://www.archlinux.org/packages/extra/x86_64/firefox/)
+- [fpc](https://www.archlinux.org/packages/community/x86_64/fpc/)
 - [git](https://www.archlinux.org/packages/extra/x86_64/git/)
 - [gutenprint](https://www.archlinux.org/packages/extra/x86_64/gutenprint/) -- has drivers for Canon printers
 - [highlight](https://www.archlinux.org/packages/community/x86_64/highlight/)
 - [htop](https://www.archlinux.org/packages/extra/x86_64/htop/)
-- [ibus](https://www.archlinux.org/packages/extra/x86_64/ibus/)
-- [ibus-anthy](https://www.archlinux.org/packages/community/x86_64/ibus-anthy/) -- for Japanese
+- [ibus-anthy](https://www.archlinux.org/packages/community/x86_64/ibus-anthy/) -- for Japanese input
+- [mariadb](https://www.archlinux.org/packages/extra/x86_64/mariadb/)
 - [mediainfo](https://www.archlinux.org/packages/community/x86_64/mediainfo/)
 - [mpc](https://www.archlinux.org/packages/extra/x86_64/mpc/)
 - [mplayer](https://www.archlinux.org/packages/extra/x86_64/mplayer/)
@@ -46,6 +47,7 @@ The packages I use are split into two groups; system packages and custom package
 - [neofetch](https://aur.archlinux.org/packages/neofetch/)
 - [openssh](https://www.archlinux.org/packages/core/x86_64/openssh/)
 - [packer](https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz)
+- [php](https://www.archlinux.org/packages/extra/x86_64/php/)
 - [ranger](https://www.archlinux.org/packages/community/any/ranger/)
 - [rxvt-unicode](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode/)
 - [scrot](http://freecode.com/projects/scrot)
