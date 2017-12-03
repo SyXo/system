@@ -62,7 +62,6 @@ ln -sf $_HOME/Code/dotfiles/.conkyrc $_HOME
 ln -sf $_HOME/Code/dotfiles/.cvsignore $_HOME
 ln -sf $_HOME/Code/dotfiles/.dircolors $_HOME
 ln -sf $_HOME/Code/dotfiles/.dosbox $_HOME
-ln -sf $_HOME/Code/dotfiles/.fonts.conf $_HOME
 ln -sf $_HOME/Code/dotfiles/.mplayer $_HOME
 ln -sf $_HOME/Code/dotfiles/.tmux.conf $_HOME
 ln -sf $_HOME/Code/dotfiles/.vimrc $_HOME
