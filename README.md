@@ -38,6 +38,7 @@ The packages I use are split into two groups; system packages and custom package
 - [highlight](https://www.archlinux.org/packages/community/x86_64/highlight/)
 - [htop](https://www.archlinux.org/packages/extra/x86_64/htop/)
 - [ibus-anthy](https://www.archlinux.org/packages/community/x86_64/ibus-anthy/) -- for Japanese input
+- [jdk8-openjdk](https://www.archlinux.org/packages/extra/x86_64/jdk8-openjdk/)
 - [mariadb](https://www.archlinux.org/packages/extra/x86_64/mariadb/)
 - [mediainfo](https://www.archlinux.org/packages/community/x86_64/mediainfo/)
 - [mpc](https://www.archlinux.org/packages/extra/x86_64/mpc/)
@@ -68,7 +69,6 @@ The packages I use are split into two groups; system packages and custom package
 
 alsa-utils 1.1.4-1
 bind-tools 9.11.2-2
-jre8-openjdk 8.u144-1
 lib32-gnutls 3.5.13-1
 lib32-libldap 2.4.44-2
 lib32-openal 1.18.2-1

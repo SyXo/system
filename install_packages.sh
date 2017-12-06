@@ -20,11 +20,11 @@ gpg --recv-key 0FC3042E345AD05D
 
 # install packages
 sudo -u $_USER packer -S --noconfirm --noedit \
-allegro awesome bc clang cmake conky cups discord dosbox dropbox feh firefox \
-fpc git gutenprint highlight htop ibus-anthy mariadb mediainfo mpc mplayer \
-mupdf ncmpcpp neofetch openssh php pulseaudio ranger rxvt-unicode scrot steam \
-texlive-latexextra thunderbird tmux transmission-cli ttf-hack vagrant vim \
-virtualbox wine-staging xcompmgr xrog-server xorg-xinit
+awesome bc clang cmake conky cups discord dosbox dropbox feh firefox git \
+gutenprint highlight htop ibus-anthy mediainfo mpc mplayer mupdf ncmpcpp \
+neofetch openssh pulseaudio ranger rxvt-unicode scrot steam texlive-latexextra \
+thunderbird tmux transmission-cli ttf-hack vim virtualbox wine-staging \
+xcompmgr xrog-server xorg-xinit
 
 # create folders
 mkdir -p $_HOME/{Code,Documents/templates,Downloads/torrents,Music,Pictures,Videos,Virtual}
@@ -79,12 +79,5 @@ ln -sf $_HOME/Code/dotfiles/bin/ /root
 # configure git
 git config --global core.excludesfile '~/.cvsignore'
 
-# allow password-less use of nfs
-cat >> /etc/sudoers <<BOX
-Cmnd_Alias VAGRANT_EXPORTS_CHOWN = /bin/chown 0\:0 /tmp/*
-Cmnd_Alias VAGRANT_EXPORTS_MV = /bin/mv -f /tmp/* /etc/exports
-Cmnd_Alias VAGRANT_NFSD_CHECK = /usr/bin/systemctl status --no-pager nfs-server.service
-Cmnd_Alias VAGRANT_NFSD_START = /usr/bin/systemctl start nfs-server.service
-Cmnd_Alias VAGRANT_NFSD_APPLY = /usr/sbin/exportfs -ar
-%vagrant ALL=(root) NOPASSWD: VAGRANT_EXPORTS_CHOWN, VAGRANT_EXPORTS_MV, VAGRANT_NFSD_CHECK, VAGRANT_NFSD_START, VAGRANT_NFSD_APPLY
-BOX
+# add development packages
+curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_development.sh && ./install_development.sh
