@@ -22,7 +22,7 @@ gpg --recv-key 0FC3042E345AD05D
 sudo -u $_USER packer -S --noconfirm --noedit \
 allegro awesome bc clang cmake conky cups discord dosbox dropbox feh firefox \
 fpc git gutenprint highlight htop ibus-anthy mariadb mediainfo mpc mplayer \
-mupdf ncmpcpp neofetch openssh php ranger rxvt-unicode scrot steam \
+mupdf ncmpcpp neofetch openssh php pulseaudio ranger rxvt-unicode scrot steam \
 texlive-latexextra thunderbird tmux transmission-cli ttf-hack vagrant vim \
 virtualbox wine-staging xcompmgr xrog-server xorg-xinit
 
@@ -39,8 +39,9 @@ vboxmanage setproperty machinefolder $_HOME/Virtual
 # add SSH keys
 [ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -C "$_USER@$_HOSTNAME" -b 4096 -t rsa
 
-# enable cups
+# enable cups & pulseaudio
 systemctl enable org.cups.cupsd
+systemctl enable pulseaudio
 
 # edit downloads folder & start daemon
 chgrp -R transmission $_HOME/Downloads

@@ -48,6 +48,7 @@ The packages I use are split into two groups; system packages and custom package
 - [openssh](https://www.archlinux.org/packages/core/x86_64/openssh/)
 - [packer](https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz)
 - [php](https://www.archlinux.org/packages/extra/x86_64/php/)
+- [pulseaudio](https://www.archlinux.org/packages/extra/x86_64/pulseaudio/)
 - [ranger](https://www.archlinux.org/packages/community/any/ranger/)
 - [rxvt-unicode](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode/)
 - [scrot](http://freecode.com/projects/scrot)
@@ -70,14 +71,10 @@ bind-tools 9.11.2-2
 jre8-openjdk 8.u144-1
 lib32-gnutls 3.5.13-1
 lib32-libldap 2.4.44-2
-lib32-libpulse 11.1-1
-lib32-mesa 17.2.4-1
 lib32-openal 1.18.2-1
 mesa 17.2.4-1
 noto-fonts 20171025-1
 noto-fonts-cjk 20170601-1
-pulseaudio 11.1-1
-pulseaudio-alsa 2-3
 smartgit 17.1.1-1
 ttf-dejavu 2.37-1
 ufw 0.35-3
