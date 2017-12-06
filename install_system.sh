@@ -1,8 +1,9 @@
 #!/bin/bash
 
 #
-# This is a script which installs my hand-crafted environment. Be warned,
-# though, that this will erase all data on selected partition.
+# This is a script which auto-installs my GNU/Linux distribution of choice and
+# an environment with hand-picked packages. Be warned, though, that this will
+# erase all data on selected partition.
 #
 
 # custom settings
@@ -37,10 +38,11 @@ _awesome() {
 loadkeys $_KEYMAP
 
 # print welcome & warning messages
-printf "Welcome to Tora-chan's Automatic Installer! This script will install a fully configured, ready-to-use system with %s on %s!\n" "$(_awesome)" "$(_archlinux)"
+printf "Welcome to Tora-chan's Automatic Installation Script! This will install a fully configured, ready-to-use system with %s on %s!\n" "$(_awesome)" "$(_archlinux)"
 printf "\e[0;31mAttention! Beware that this will erase the entire %s partition & you'll lose all not previously backed up data! Proceed only if you're entirely sure!\e[0m\n\n" $_PARTITION
 dialogue "Do you wish to proceed?" || { printf "\nBye!\n"; exit; }
 
+# show old partitions
 lsblk
 
 # create partitions
@@ -91,13 +93,13 @@ case "$(lspci | grep -e VGA -e 3D)" in
 	*Intel*) _DRIVER="$_DRIVER xf86-video-intel" # xf86-video-nouveau xf86-video-ati xf86-video-amdgpu
 esac
 
-# install system
+# install system packages
 pacstrap -i /mnt base base-devel grub $_DRIVER
 
 # write partition table
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
-# enter system
+# enter into system
 arch-chroot /mnt /bin/bash
 
 # install boot loader
