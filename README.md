@@ -35,6 +35,7 @@ The packages I use are split into two groups; system packages and custom package
 - [fpc](https://www.archlinux.org/packages/community/x86_64/fpc/)
 - [git](https://www.archlinux.org/packages/extra/x86_64/git/)
 - [gutenprint](https://www.archlinux.org/packages/extra/x86_64/gutenprint/) -- has drivers for Canon printers
+- [ghostscript](https://www.archlinux.org/packages/extra/x86_64/ghostscript/)
 - [highlight](https://www.archlinux.org/packages/community/x86_64/highlight/)
 - [htop](https://www.archlinux.org/packages/extra/x86_64/htop/)
 - [ibus-anthy](https://www.archlinux.org/packages/community/x86_64/ibus-anthy/) -- for Japanese input
