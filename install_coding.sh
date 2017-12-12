@@ -2,19 +2,16 @@
 
 #
 # Installs my development environment I use for work as well as hobby.
+# Prerequisites: packer
 #
 
-# set constants if not passed through from ./install_system.sh
+# set constants if not passed through from ./install_packages.sh
 [ -z $_USER ] && _USER=$(whoami)
 _HOME=/home/$_USER
 
 # install papkages
 sudo -u $_USER packer -S --noconfirm --noedit \
-allegro fpc jdk8-openjdk mariadb npm php vagrant
-# smartgit
-# dbeaver
-# eclipse
-# phpstorm
+allegro fpc jdk8-openjdk mariadb npm php vagrant virtualbox
 
 # setup database
 mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
@@ -31,6 +28,10 @@ php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece38
 php composer-setup.php --filename=composer --install-dir=$_HOME/bin
 php -r "unlink('composer-setup.php');"
 
+# create virtual foder & change virtualbox folder
+mkdir -p $_HOME/Virtual
+vboxmanage setproperty machinefolder $_HOME/Virtual
+
 # allow password-less use of nfs
 cat >> /etc/sudoers <<BOX
 Cmnd_Alias VAGRANT_EXPORTS_CHOWN = /bin/chown 0\:0 /tmp/*
@@ -40,4 +41,3 @@ Cmnd_Alias VAGRANT_NFSD_START = /usr/bin/systemctl start nfs-server.service
 Cmnd_Alias VAGRANT_NFSD_APPLY = /usr/sbin/exportfs -ar
 %vagrant ALL=(root) NOPASSWD: VAGRANT_EXPORTS_CHOWN, VAGRANT_EXPORTS_MV, VAGRANT_NFSD_CHECK, VAGRANT_NFSD_STA    RT, VAGRANT_NFSD_APPLY
 BOX
-

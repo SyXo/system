@@ -20,24 +20,20 @@ gpg --recv-key 0FC3042E345AD05D
 
 # install packages
 sudo -u $_USER packer -S --noconfirm --noedit \
-awesome bc clang cmake conky cups discord dosbox dropbox feh firefox git \
-ghostscript gutenprint highlight htop ibus-anthy mediainfo mpc mplayer mupdf \
-ncmpcpp neofetch openssh pulseaudio ranger rxvt-unicode scrot steam \
-texlive-latexextra thunderbird tmux transmission-cli ttf-hack vim virtualbox \
-wine-staging xcompmgr xrog-server xorg-xinit
+awesome bc clang cmake conky cups discord dropbox feh firefox git ghostscript \
+gutenprint highlight htop ibus-anthy mediainfo mpc mplayer mupdf ncmpcpp \
+neofetch openssh pulseaudio ranger rxvt-unicode scrot texlive-latexextra \
+thunderbird tmux transmission-cli ttf-hack vim xcompmgr xrog-server xorg-xinit
+
+# add SSH keys
+[ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -C "$_USER@$_HOSTNAME" -b 4096 -t rsa
 
 # create folders
-mkdir -p $_HOME/{Code,Documents/templates,Downloads/torrents,Music,Pictures,Videos,Virtual}
+mkdir -p $_HOME/{Code,Documents/templates,Downloads/torrents,Music,Pictures,Videos}
 
 # install vim bundles
 git clone https://github.com/editorconfig/editorconfig-vim.git $_HOME/.vim/bundle
 git clone https://github.com/mattn/emmet-vim.git $_HOME/.vim/bundle
-
-# change virtualbox folder
-vboxmanage setproperty machinefolder $_HOME/Virtual
-
-# add SSH keys
-[ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -C "$_USER@$_HOSTNAME" -b 4096 -t rsa
 
 # enable cups & pulseaudio
 systemctl enable org.cups.cupsd
@@ -62,7 +58,6 @@ ln -sf $_HOME/Code/dotfiles/.config/ $_HOME
 ln -sf $_HOME/Code/dotfiles/.conkyrc $_HOME
 ln -sf $_HOME/Code/dotfiles/.cvsignore $_HOME
 ln -sf $_HOME/Code/dotfiles/.dircolors $_HOME
-ln -sf $_HOME/Code/dotfiles/.dosbox $_HOME
 ln -sf $_HOME/Code/dotfiles/.mplayer $_HOME
 ln -sf $_HOME/Code/dotfiles/.tmux.conf $_HOME
 ln -sf $_HOME/Code/dotfiles/.vimrc $_HOME
@@ -79,5 +74,8 @@ ln -sf $_HOME/Code/dotfiles/bin/ /root
 # configure git
 git config --global core.excludesfile '~/.cvsignore'
 
-# add development packages
-curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_development.sh && ./install_development.sh
+# setup for coding
+curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_coding.sh && ./install_coding.sh
+
+# setup for gaming
+curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_gaming.sh && ./install_gaming.sh
