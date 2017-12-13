@@ -2,8 +2,8 @@
 
 #
 # This is a script which auto-installs my GNU/Linux distribution of choice and
-# an environment with hand-picked packages. Be warned, though, that this will
-# erase all data on selected partition.
+# an environment with hand-picked packages. Be warned, though, that running this
+# script will erase all data on the selected partition.
 #
 
 # custom settings
@@ -85,7 +85,6 @@ mount ${_PARTITION}4 /mnt/home
 
 # check result
 lsblk
-#dialogue "Is this OK?" "Y" || fdisk $_PARTITION
 
 # find graphics card
 _DRIVER="mesa lib32-mesa"

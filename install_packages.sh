@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# This script installs all the packages & dotfiles I use daily.
+# This script installs all the common packages & dotfiles I use daily.
 #
 
 # set constants if not passed through from ./install_system.sh
