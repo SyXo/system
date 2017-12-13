@@ -46,30 +46,9 @@ systemctl enable transmission
 # enable images in ranger
 ranger --copy-config=scope
 
-# fetch dotfiles
-git clone --recursive https://github.com/joakimaling/dotfiles $_HOME/Code
-
-# link dotfiles
-ln -sf $_HOME/Code/dotfiles/.bash_logout $_HOME
-ln -sf $_HOME/Code/dotfiles/.bash_profile $_HOME
-ln -sf $_HOME/Code/dotfiles/.bashrc $_HOME
-ln -sf $_HOME/Code/dotfiles/bin/ $_HOME
-ln -sf $_HOME/Code/dotfiles/.config/ $_HOME
-ln -sf $_HOME/Code/dotfiles/.conkyrc $_HOME
-ln -sf $_HOME/Code/dotfiles/.cvsignore $_HOME
-ln -sf $_HOME/Code/dotfiles/.dircolors $_HOME
-ln -sf $_HOME/Code/dotfiles/.mplayer $_HOME
-ln -sf $_HOME/Code/dotfiles/.tmux.conf $_HOME
-ln -sf $_HOME/Code/dotfiles/.vimrc $_HOME
-ln -sf $_HOME/Code/dotfiles/.vim/ $_HOME
-ln -sf $_HOME/Code/dotfiles/.xinitrc $_HOME
-ln -sf $_HOME/Code/dotfiles/.Xresources $_HOME
-
-# link for root
-ln -sf $_HOME/Code/dotfiles/.bash_logout /root
-ln -sf $_HOME/Code/dotfiles/.bash_profile /root
-ln -sf $_HOME/Code/dotfiles/.bashrc /root
-ln -sf $_HOME/Code/dotfiles/bin/ /root
+# fetch & link dotfiles
+git clone --recursive https://github.com/joakimaling/dotfiles.git $_HOME/Code
+$_HOME/Code/dotfiles/install.sh
 
 # configure git
 git config --global core.excludesfile '~/.cvsignore'
