@@ -20,7 +20,7 @@ gpg --recv-key 0FC3042E345AD05D
 
 # install packages
 sudo -u $_USER packer -S --noconfirm --noedit \
-awesome bc clang cmake conky cups discord dropbox feh firefox git ghostscript \
+awesome bc clang cmake conky discord dropbox feh firefox git ghostscript \
 gutenprint highlight htop ibus-anthy mediainfo mpc mplayer mupdf ncmpcpp \
 neofetch openssh pulseaudio ranger rxvt-unicode scrot texlive-latexextra \
 thunderbird tmux transmission-cli ttf-hack vim xcompmgr xrog-server xorg-xinit

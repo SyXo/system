@@ -34,7 +34,6 @@ The packages I use are split into several groups; system, common, coding and gam
 ### Common packages
 - [awesome](https://www.archlinux.org/packages/community/x86_64/awesome/)
 - [conky](https://www.archlinux.org/packages/extra/x86_64/conky/)
-- [cups](https://www.archlinux.org/packages/extra/x86_64/cups/)
 - [discord](https://aur.archlinux.org/packages/discord/)
 - [dropbox](https://aur.archlinux.org/packages/dropbox/)
 - [feh](https://www.archlinux.org/packages/extra/x86_64/feh/)
