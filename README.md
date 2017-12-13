@@ -28,8 +28,10 @@ The packages I use are split into several groups; system, common, coding and gam
 - [base](https://www.archlinux.org/groups/x86_64/base/)
 - [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/)
 - [grub](https://www.archlinux.org/packages/core/x86_64/grub/)
-
-### Custom packages
+- [lib32-mesa](https://www.archlinux.org/packages/multilib/x86_64/lib32-mesa/) X
+- [mesa](https://www.archlinux.org/packages/extra/x86_64/mesa/) X
+- And one of:
+  - [xf86-video-intel](https://www.archlinux.org/packages/extra/x86_64/xf86-video-intel/)
 
 ### Common packages
 - [awesome](https://www.archlinux.org/packages/community/x86_64/awesome/)
@@ -87,4 +89,3 @@ This code is distributed as is. I hold no responsibility to any possible damage 
 - Test!
 - Add Ubuntu (my servers run Ubuntu)
 - Add options for laptops (battery, wireless)
-- Detect graphics card and install correct drivers
