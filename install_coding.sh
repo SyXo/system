@@ -11,7 +11,7 @@ _HOME=/home/$_USER
 
 # install papkages
 sudo -u $_USER packer -S --noconfirm --noedit \
-allegro fpc jdk8-openjdk mariadb npm php vagrant virtualbox
+allegro fpc jdk8-openjdk mariadb npm php ruby vagrant virtualbox
 
 # setup database
 mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
@@ -27,6 +27,9 @@ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 php composer-setup.php --filename=composer --install-dir=$_HOME/bin
 php -r "unlink('composer-setup.php');"
+
+# install jekyll
+gem install bundler jekyll
 
 # create virtual foder & change virtualbox folder
 mkdir -p $_HOME/Virtual
