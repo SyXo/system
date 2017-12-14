@@ -9,6 +9,10 @@
 [ -z $_USER ] && _USER=$(whoami)
 _HOME=/home/$_USER
 
+# git repository addresses
+_GITHUB_RAW=https://raw.githubusercontent.com/joakimaling/system/master
+_GITHUB=https://github.com
+
 # AUR installer
 curl -LO https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz
 tar -f packer.tar.gz -x -z && cd packer
@@ -32,8 +36,8 @@ thunderbird tmux transmission-cli ttf-hack vim xcompmgr xrog-server xorg-xinit
 mkdir -p $_HOME/{Code,Documents/templates,Downloads/torrents,Music,Pictures,Videos}
 
 # install vim bundles
-git clone https://github.com/editorconfig/editorconfig-vim.git $_HOME/.vim/bundle
-git clone https://github.com/mattn/emmet-vim.git $_HOME/.vim/bundle
+git clone $_GITHUB/editorconfig/editorconfig-vim.git $_HOME/.vim/bundle
+git clone $_GITHUB/mattn/emmet-vim.git $_HOME/.vim/bundle
 
 # enable cups & pulseaudio
 systemctl enable org.cups.cupsd
@@ -47,14 +51,14 @@ systemctl enable transmission
 ranger --copy-config=scope
 
 # fetch & link dotfiles
-git clone --recursive https://github.com/joakimaling/dotfiles.git $_HOME/Code
+git clone --recursive $_GITHUB/joakimaling/dotfiles.git $_HOME/Code
 $_HOME/Code/dotfiles/install.sh
 
 # configure git
 git config --global core.excludesfile '~/.cvsignore'
 
 # setup for coding
-curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_coding.sh && ./install_coding.sh
+curl -LO $_GITHUB_RAW/install_coding.sh && ./install_coding.sh
 
 # setup for gaming
-curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_gaming.sh && ./install_gaming.sh
+curl -LO $_GITHUB_RAW/install_gaming.sh && ./install_gaming.sh
