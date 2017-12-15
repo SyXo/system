@@ -9,8 +9,8 @@ When installing a new system; load the Arch Linux installation media and type th
 ```
 When only wanting to install the packages and dotfiles on an existing system; type these commands
 ```
-# curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_packages.sh
-# ./install_packages.sh
+# curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_common.sh
+# ./install_common.sh
 ```
 The scripts will optionally set up environments for development and gaming. But if you'd wish to only install these separately; type these commands respectively (requires [packer](https://github.com/keenerd/packer))
 ```
