@@ -152,7 +152,7 @@ passwd
 
 # install packages (see ./install_packages.sh for more)
 if [ dialogue "Install packages & dotfiles?" "Y" ]; then
-  curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_packages.sh && ./install_packages.sh
+  curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_common.sh && ./install_common.sh
 fi
 
 # clean up
