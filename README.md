@@ -57,6 +57,7 @@ The packages I use are split into several groups; system, common, coding and gam
 - [pulseaudio](https://www.archlinux.org/packages/extra/x86_64/pulseaudio/)
 - [ranger](https://www.archlinux.org/packages/community/any/ranger/)
 - [rxvt-unicode](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode/)
+- [sc-im](https://aur.archlinux.org/packages/sc-im/)
 - [scrot](http://freecode.com/projects/scrot)
 - [texlive-latexextra](https://www.archlinux.org/packages/extra/any/texlive-latexextra/) -- for LaTeX
 - [thunderbird](https://www.archlinux.org/packages/extra/x86_64/thunderbird/)
