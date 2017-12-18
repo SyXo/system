@@ -34,7 +34,7 @@ thunderbird tmux transmission-cli ttf-hack vim xcompmgr xrog-server xorg-xinit
 [ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -C "$_USER@$_HOSTNAME" -b 4096 -t rsa
 
 # create folders
-mkdir -p $_HOME/{Code,Documents/templates,Downloads/torrents,Music,Pictures,Videos}
+mkdir -p $_HOME/{Code,Documents,Downloads/torrents,Music,Pictures,Videos}
 
 # install vim bundles
 git clone $_GITHUB/editorconfig/editorconfig-vim.git $_HOME/.vim/bundle
@@ -50,6 +50,10 @@ systemctl enable transmission
 
 # enable images in ranger
 ranger --copy-config=scope
+
+# fetch & link templates
+git clone $_GITHUB/joakimaling/templates.git $_HOME/Code
+ln -sf $_HOME/Code/templates $_HOME/Documents/
 
 # fetch & link dotfiles
 git clone --recursive $_GITHUB/joakimaling/dotfiles.git $_HOME/Code
