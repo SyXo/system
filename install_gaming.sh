@@ -11,5 +11,8 @@ _HOME=/home/$_USER
 sudo -u $_USER packer -S --noconfirm --noedit \
 dosbox steam wine-staging
 
+# create folders
+mkdir -p $_HOME/Games/{msdos,wine}
+
 # link dosbox config
 ln -sf $_HOME/Code/dotfiles/.dosbox $_HOME
