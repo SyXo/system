@@ -102,7 +102,7 @@ case "$(lspci | grep -e VGA -e 3D)" in
 esac
 
 # install system packages
-pacstrap -i /mnt base base-devel grub $_DRIVER
+pacstrap /mnt base base-devel grub $_DRIVER
 
 # write partition table
 genfstab -U -p /mnt >> /mnt/etc/fstab
