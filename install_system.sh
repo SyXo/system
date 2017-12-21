@@ -2,7 +2,7 @@
 
 #
 # This is a script which auto-installs my GNU/Linux distribution of choice and
-# an environment with hand-picked packages. Be warned, though, that running this
+# an environment with hand-picked packages. Be warned though, that running this
 # script will erase all data on the selected partition.
 #
 
@@ -20,11 +20,11 @@ abort() {
 
 dialogue() {
   while true; do
-    read -p "$(printf "$1 [%s] " $([ "$2" == "Y" ] && echo "Yn" || echo "yN"))" answer
+    read -p "$(printf "$1 [%s] " $([ $2 == "Y" ] && echo "Yn" || echo "yN"))" answer
     case $answer in
       [Yy]) return 0 ;;
       [Nn]) return 1 ;;
-      "") [ "$2" == "Y" ] && return 0 || return 1 ;;
+      "") [ $2 == "Y" ] && return 0 || return 1 ;;
       *) echo "Y or N." ;;
     esac
   done
@@ -169,5 +169,5 @@ exit
 umount -R /mnt
 
 # eject & reboot
-dialogue "Eject CD-rom?" && eject
+dialogue "Eject CD-rom?" "Y" && eject
 reboot
