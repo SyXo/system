@@ -5,6 +5,10 @@
 # Prerequisites: packer
 #
 
+# custom settings
+_EMAIL=joakim.aling@gmail.com
+_NAME=joakimaling
+
 # set constants if not passed through from ./install_packages.sh
 [ -z $_USER ] && _USER=$(whoami)
 _HOME=/home/$_USER
@@ -13,7 +17,12 @@ _HOME=/home/$_USER
 sudo -u $_USER packer -S --noconfirm --noedit \
 allegro fpc jdk8-openjdk mariadb nfs-utils npm php ruby vagrant virtualbox
 
-# setup database
+# setup git
+git config -f $_HOME/.gitconfig color.ui auto
+git config -f $_HOME/.gitconfig user.email $_EMAIL
+git config -f $_HOME/.gitconfig user.name $_NAME
+
+# configure the database
 mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 systemctl enable mariadb
 systemctl start mariadb
