@@ -4,21 +4,21 @@ This is a compilation of scripts which aims to automate the installation process
 ## Installation
 When installing a new system; load the Arch Linux installation media and type these commands when a prompt appears
 ```
-# curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_system.sh
-# ./install_system.sh
+curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_system.sh
+./install_system.sh
 ```
 When only wanting to install the packages and dotfiles on an existing system; type these commands
 ```
-# curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_common.sh
-# ./install_common.sh
+curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_common.sh
+./install_common.sh
 ```
 The scripts will optionally set up environments for development and gaming. But if you'd wish to only install these separately; type these commands respectively (requires [packer](https://github.com/keenerd/packer))
 ```
 curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_coding.sh
-# ./install_coding.sh
+./install_coding.sh
 
 curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_gaming.sh
-# ./install_gaming.sh
+./install_gaming.sh
 ```
 
 ## Packages installed
@@ -28,8 +28,8 @@ The packages I use are split into several groups; system, common, coding and gam
 - [base](https://www.archlinux.org/groups/x86_64/base/)
 - [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/)
 - [grub](https://www.archlinux.org/packages/core/x86_64/grub/)
-- [lib32-mesa](https://www.archlinux.org/packages/multilib/x86_64/lib32-mesa/) X
-- [mesa](https://www.archlinux.org/packages/extra/x86_64/mesa/) X
+- [lib32-mesa](https://www.archlinux.org/packages/multilib/x86_64/lib32-mesa/)
+- [mesa](https://www.archlinux.org/packages/extra/x86_64/mesa/)
 - And one of:
   - [xf86-video-intel](https://www.archlinux.org/packages/extra/x86_64/xf86-video-intel/)
 
