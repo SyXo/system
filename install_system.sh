@@ -14,6 +14,10 @@ _PARTITION=/dev/sda
 _TIMEZONE=Europe/Stockholm
 _USER=tora_chan
 
+abort() {
+  { printf "Error: $1. Aborting..." 1>&2; exit 1; }
+}
+
 dialogue() {
   while true; do
     read -p "$(printf "$1 [%s] " $([ "$2" == "Y" ] && echo "Yn" || echo "yN"))" answer
@@ -40,6 +44,11 @@ loadkeys $_KEYMAP
 # print welcome & warning messages
 printf "Welcome to Tora-chan's Automatic Installation Script! This will install a fully configured, ready-to-use system with %s on %s!\n" "$(_awesome)" "$(_archlinux)"
 printf "\e[0;31mAttention! Beware that this will erase the entire %s partition & you'll lose all not previously backed up data! Proceed only if you're entirely sure!\e[0m\n\n" $_PARTITION
+
+# check if run as root
+[ $(id -u) -ne 0 ] && abort "You must run as root"
+
+# get approval from user
 dialogue "Do you wish to proceed?" || { printf "\nBye!\n"; exit; }
 
 # show old partitions
