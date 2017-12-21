@@ -95,14 +95,8 @@ mount ${_PARTITION}4 /mnt/home
 # check result
 lsblk
 
-# find graphics card
-_DRIVER="mesa lib32-mesa"
-case "$(lspci | grep -e VGA -e 3D)" in
-	*Intel*) _DRIVER="$_DRIVER xf86-video-intel" # xf86-video-nouveau xf86-video-ati xf86-video-amdgpu
-esac
-
 # install system packages
-pacstrap /mnt base base-devel grub $_DRIVER
+pacstrap /mnt base base-devel grub
 
 # write partition table
 genfstab -U -p /mnt >> /mnt/etc/fstab
@@ -114,11 +108,30 @@ arch-chroot /mnt /bin/bash
 grub-install --recheck $_PARTITION
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# setup pacman
-sed -i -e 's/\#\[multilib\]/\[multilib\]/g' /etc/pacman.conf
-sed -i '/\[multilib\]/{n;s/.*/Include = \/etc\/pacman.d\/mirrorlist/}' /etc/pacman.conf
+# check architecture
+[ getconf LONG_BIT -eq 64 ] && _64BIT=0 || _64BIT=1
+
+# setup pacman - multilib
+if [ $_64BIT ]; then
+  sed -i -e 's/\#\[multilib\]/\[multilib\]/g' /etc/pacman.conf
+  sed -i '/\[multilib\]/{n;s/.*/Include = \/etc\/pacman.d\/mirrorlist/}' /etc/pacman.conf
+fi
+
+# setup pacman - other
 sed -i '/#VerbosePkgLists/a ILoveCandy' /etc/pacman.conf
 pacman -Syy
+
+# find graphics card
+_DRIVER=$($_64BIT && echo 'lib32-')"mesa"
+case "$(lspci | grep -e VGA -e 3D)" in
+  *Intel*) _DRIVER="$_DRIVER xf86-video-intel"
+  # xf86-video-nouveau
+  # xf86-video-ati
+  # xf86-video-amdgpu
+esac
+
+# install graphics driver
+pacman -S --noconfirm $_DRIVER
 
 # enable networking
 cat > /etc/netctl/${_HOSTNAME}_ethernet <<EOF
