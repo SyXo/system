@@ -159,7 +159,7 @@ sed -i -e 's/ \#%wheel ALL=(ALL) ALL/ %wheel ALL=(ALL) ALL/g' /etc/sudoers
 # set password for root
 passwd
 
-# install packages (see ./install_packages.sh for more)
+# install packages (see ./install_common.sh for more)
 if [ dialogue "Install packages & dotfiles?" "Y" ]; then
   curl -LO https://raw.githubusercontent.com/joakimaling/system/master/install_common.sh && ./install_common.sh
 fi
