@@ -34,6 +34,7 @@ The packages I use are split into several groups; system, common, coding and gam
   - [xf86-video-intel](https://www.archlinux.org/packages/extra/x86_64/xf86-video-intel/)
 
 ### Common packages
+- [atool](https://www.archlinux.org/packages/community/any/atool/)
 - [awesome](https://www.archlinux.org/packages/community/x86_64/awesome/)
 - [conky](https://www.archlinux.org/packages/extra/x86_64/conky/)
 - [discord](https://aur.archlinux.org/packages/discord/)
