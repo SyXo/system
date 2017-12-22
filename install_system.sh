@@ -51,9 +51,6 @@ printf "\e[0;31mAttention! Beware that this will erase the entire %s partition &
 # get approval from user
 dialogue "Do you wish to proceed?" || { printf "\nBye!\n"; exit; }
 
-# show old partitions
-lsblk
-
 # create partitions
 cat | fdisk $_PARTITION <<EOF
 o
@@ -91,9 +88,6 @@ mount ${_PARTITION}3 /mnt
 mkdir -p /mnt/{boot,home}
 mount ${_PARTITION}1 /mnt/boot
 mount ${_PARTITION}4 /mnt/home
-
-# check result
-lsblk
 
 # install system packages
 pacstrap /mnt base base-devel grub
