@@ -65,6 +65,8 @@ The packages I use are split into several groups; system, common, coding and gam
 - [tmux](https://www.archlinux.org/packages/community/x86_64/tmux/)
 - [transmission-cli](https://www.archlinux.org/packages/extra/x86_64/transmission-cli/)
 - [ttf-hack](https://www.archlinux.org/packages/extra/any/ttf-hack/) -- primary terminal font
+- [unrar](https://www.archlinux.org/packages/extra/x86_64/unrar/)
+- [unzip](https://www.archlinux.org/packages/extra/x86_64/unzip/)
 - [vim](https://www.archlinux.org/packages/extra/x86_64/vim/)
 - [xcompmgr](https://www.archlinux.org/packages/extra/x86_64/xcompmgr/) -- for true transparency
 - [xorg-server](https://www.archlinux.org/packages/extra/x86_64/xorg-server/)
