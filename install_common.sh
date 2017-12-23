@@ -27,9 +27,9 @@ gpg --recv-key 0FC3042E345AD05D
 sudo -u $_USER packer -S --noconfirm --noedit \
 atool awesome bc clang cmake conky discord dropbox feh firefox git ghostscript \
 gutenprint highlight htop ibus-anthy mediainfo mpc mplayer mupdf ncmpcpp \
-neofetch openssh pulseaudio ranger rxvt-unicode sc-im scrot texlive-latexextra \
-thunderbird tmux transmission-cli ttf-hack unrar unzip vim xcompmgr \
-xrog-server xorg-xinit xorg-xprop xorg-xrandr
+neofetch openssh pulseaudio qutebrowser ranger rxvt-unicode sc-im scrot \
+texlive-latexextra thunderbird tmux transmission-cli ttf-hack unrar unzip vim \
+xcompmgr xrog-server xorg-xinit xorg-xprop xorg-xrandr
 
 # add SSH keys
 [ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -C "$_USER@$_HOSTNAME" -b 4096 -t rsa

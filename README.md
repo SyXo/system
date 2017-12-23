@@ -56,6 +56,7 @@ The packages I use are split into several groups; system, common, coding and gam
 - [openssh](https://www.archlinux.org/packages/core/x86_64/openssh/)
 - [packer](https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz)
 - [pulseaudio](https://www.archlinux.org/packages/extra/x86_64/pulseaudio/)
+- [qutebrowser](https://www.archlinux.org/packages/community/any/qutebrowser/)
 - [ranger](https://www.archlinux.org/packages/community/any/ranger/)
 - [rxvt-unicode](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode/)
 - [sc-im](https://aur.archlinux.org/packages/sc-im/)
