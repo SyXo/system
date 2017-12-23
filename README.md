@@ -71,6 +71,8 @@ The packages I use are split into several groups; system, common, coding and gam
 - [xcompmgr](https://www.archlinux.org/packages/extra/x86_64/xcompmgr/) -- for true transparency
 - [xorg-server](https://www.archlinux.org/packages/extra/x86_64/xorg-server/)
 - [xorg-xinit](https://www.archlinux.org/packages/extra/x86_64/xorg-xinit/)
+- [xorg-xprop](https://www.archlinux.org/packages/extra/x86_64/xorg-xprop/)
+- [xorg-xrandr](https://www.archlinux.org/packages/extra/x86_64/xorg-xrandr/)
 
 ### Coding packages
 - [allegro](https://www.archlinux.org/packages/community/x86_64/allegro/) -- A game programming library I use
