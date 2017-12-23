@@ -73,8 +73,9 @@ The packages I use are split into several groups; system, common, coding and gam
 - [xorg-xinit](https://www.archlinux.org/packages/extra/x86_64/xorg-xinit/)
 
 ### Coding packages
-- [allegro](https://www.archlinux.org/packages/community/x86_64/allegro/)
+- [allegro](https://www.archlinux.org/packages/community/x86_64/allegro/) -- A game programming library I use
 - [fpc](https://www.archlinux.org/packages/community/x86_64/fpc/)
+- [gimp](https://www.archlinux.org/packages/extra/x86_64/gimp/)
 - [jdk8-openjdk](https://www.archlinux.org/packages/extra/x86_64/jdk8-openjdk/)
 - [mariadb](https://www.archlinux.org/packages/extra/x86_64/mariadb/)
 - [php](https://www.archlinux.org/packages/extra/x86_64/php/)

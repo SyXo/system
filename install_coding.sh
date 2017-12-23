@@ -15,7 +15,7 @@ _HOME=/home/$_USER
 
 # install papkages
 sudo -u $_USER packer -S --noconfirm --noedit \
-allegro fpc jdk8-openjdk mariadb nfs-utils npm php ruby vagrant virtualbox
+allegro fpc gimp jdk8-openjdk mariadb nfs-utils npm php ruby vagrant virtualbox
 
 # setup git
 git config -f $_HOME/.gitconfig color.ui auto
