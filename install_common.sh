@@ -29,7 +29,7 @@ atool awesome bc clang cmake conky discord dropbox feh firefox git ghostscript \
 gutenprint highlight htop ibus-anthy mediainfo mpc mplayer mupdf ncmpcpp \
 neofetch openssh pulseaudio qutebrowser ranger rxvt-unicode sc-im scrot \
 texlive-latexextra thunderbird tmux transmission-cli ttf-hack unrar unzip vim \
-xcompmgr xrog-server xorg-xinit xorg-xprop xorg-xrandr
+xcompmgr xrog-server xorg-server-xephyr xorg-xinit xorg-xprop xorg-xrandr
 
 # add SSH keys
 [ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -C "$_USER@$_HOSTNAME" -b 4096 -t rsa
