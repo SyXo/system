@@ -17,6 +17,9 @@ _HOME=/home/$_USER
 sudo -u $_USER packer -S --noconfirm --noedit \
 allegro fpc gimp jdk8-openjdk mariadb nfs-utils npm php ruby vagrant virtualbox
 
+# add administrative privileges
+usermod -a vagrant,vboxusers $_USER
+
 # setup git
 git config -f $_HOME/.gitconfig color.ui auto
 git config -f $_HOME/.gitconfig user.email $_EMAIL

@@ -157,7 +157,7 @@ timedatectl set-ntp true
 hwclock --systohc
 
 # create user
-useradd -G lp,vagrant,vboxusers,wheel -g users -m -s /bin/bash $_USER
+useradd -G wheel -g users -m -s /bin/bash $_USER
 passwd $_USER
 
 # allow sudo usage for wheel

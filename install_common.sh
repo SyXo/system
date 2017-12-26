@@ -34,6 +34,9 @@ xcompmgr xrog-server xorg-xinit xorg-xprop xorg-xrandr
 # add SSH keys
 [ -f $_HOME/.ssh/id_rsa ] || ssh-keygen -C "$_USER@$_HOSTNAME" -b 4096 -t rsa
 
+# add administrative privileges
+usermod -a lp,sys $_USER
+
 # create folders
 mkdir -p $_HOME/{Code,Documents,Downloads/torrents,Music,Pictures,Videos}
 
