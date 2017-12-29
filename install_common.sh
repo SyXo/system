@@ -38,7 +38,7 @@ xcompmgr xrog-server xorg-server-xephyr xorg-xinit xorg-xprop xorg-xrandr
 usermod -a lp,sys $_USER
 
 # create folders
-mkdir -p $_HOME/{Code,Documents,Downloads/torrents,Music,Pictures,Videos}
+mkdir -p $_HOME/{Code,Documents/lyrics,Downloads/torrents,Music,Pictures/{dumps,wallpapers},Videos}
 
 # install vim bundles
 git clone $_GITHUB/editorconfig/editorconfig-vim.git $_HOME/.vim/bundle
