@@ -43,11 +43,11 @@ php -r "unlink('composer-setup.php');"
 # install jekyll
 gem install bundler jekyll
 
-# create virtual foder & change virtualbox folder
+# create virtual folder & change to it
 mkdir -p $_HOME/Virtual
 vboxmanage setproperty machinefolder $_HOME/Virtual
 
-# allow password-less use of nfs
+# allow passwordless use of nfs
 cat >> /etc/sudoers <<BOX
 Cmnd_Alias VAGRANT_EXPORTS_CHOWN = /bin/chown 0\:0 /tmp/*
 Cmnd_Alias VAGRANT_EXPORTS_MV = /bin/mv -f /tmp/* /etc/exports
